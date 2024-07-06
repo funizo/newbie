@@ -1,8 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { SubmitHandler } from "react-hook-form";
+import useGetQuery from "../hooks/useGetQuery";
+
 import AuthForm from "../components/auth/AuthForm";
 
+//무분별한 회원가입을 막기위해 이메일 인증받은 이메일만 회원가입구현해야함 (나중에)
+//SNS로그인 구현 (나중에)
+
 const AuthContainer: React.FC = () => {
-  return <AuthForm />;
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [selectedTag, setSelectedTag] = useState(null);
+  const [signUpSuccess, setSignUpSuccess] = useState(false);
+  const mode = useGetQuery("mode");
+  const navigate = useNavigate();
+
+  //useGetQuery사용
+  useEffect(() => {
+    setIsSignUp(mode === "signup");
+  }, [mode]);
+
+  //로그인,회원기입 폼 전환
+  const toggleForm = () => {
+    navigate(`?mode=${isSignUp ? "login" : "signup"}`);
+  };
+
+  const handleTagClick = (tag) => {
+    setSelectedTag(tag);
+  };
+
+  return (
+    <AuthForm isSignUp={isSignUp} toggleForm={toggleForm} handleTagClick={handleTagClick} selectedTag={selectedTag} />
+  );
 };
 
 export default AuthContainer;

@@ -2,7 +2,7 @@ import React from "react";
 
 const MainForm: React.FC = () => {
   return (
-    <main className="my-32">
+    <main className="my-32 bg-slate-300">
       <div>메인</div>
     </main>
   );

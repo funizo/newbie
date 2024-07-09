@@ -1,14 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import routes from "../../constants/routes";
+import whale from "../../assets/whale.png";
 
 const HeaderForm: React.FC = () => {
   return (
-    <header className="w-full h-16 bg-blue-400">
+    <header className="w-full h-16 bg-blue-300">
       <nav className="flex items-center justify-center h-full">
         <div className="flex justify-between items-center w-full px-4">
           <Link to="/" className="text-white font-bold text-2xl">
-            코린이
+            <img src={whale} alt="logo" className="mx-auto h-16 w-auto" />
           </Link>
           <Link to={routes.login} className="text-white font-bold text-2xl">
             로그인/회원가입

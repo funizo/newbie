@@ -14,10 +14,10 @@ export interface UserLoginDataType extends UserDataType {
 // Auth
 export interface SignUpFormDataType {
   password: string;
-  password_confirm: string;
+  confirmPassword: string;
   email: string;
-  username: string;
-  //직무
+  nickname: string;
+  tag: string;
 }
 
 export interface LoginFormDataType {

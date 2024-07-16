@@ -10,6 +10,7 @@ const App: React.FC = () => {
     <Routes>
       <Route element={<MainLayout />}>
         <Route index element={<MainPage />} />
+        <Route path=":category" element={<MainPage />} />
       </Route>
       <Route path={routes.auth} element={<AuthPage />} /> {/* 로그인,회원가입 페이지 */}
     </Routes>

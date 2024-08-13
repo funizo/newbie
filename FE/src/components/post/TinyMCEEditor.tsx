@@ -14,7 +14,7 @@ const TinyMCEEditor: React.FC<TinyMCEEditorProps> = ({
 
     return (
         <Editor
-            apiKey="sxmg20ph526xyi8acem6k8jmdnpq11645hgxibfoc70j49h7"
+            apiKey={process.env.REACT_APP_API_KEY}
             onInit={(evt, editor) => {
                 editorRef.current = editor;
             }}

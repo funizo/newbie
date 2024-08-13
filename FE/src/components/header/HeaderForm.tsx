@@ -11,7 +11,7 @@ const HeaderForm: React.FC = () => {
           <Link to="/" className="text-white font-bold text-2xl">
             <img src={whale} alt="logo" className="mx-auto h-16 w-auto" />
           </Link>
-          <Link to={routes.login} className="text-white font-bold text-2xl">
+          <Link to={routes.login} className="text-white font-bold text-xl">
             로그인/회원가입
           </Link>
         </div>

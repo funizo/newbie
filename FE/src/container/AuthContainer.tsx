@@ -16,6 +16,8 @@ const AuthContainer: React.FC = () => {
     const mode = useGetQuery("mode");
     const navigate = useNavigate();
     const { signUp, error, loading } = useSignUp();
+    const [emailCheck, setEmailCheck] = useState(false);
+    const [nicknameCheck, setNicknameCheck] = useState(false);
 
     //useGetQuery사용
     useEffect(() => {

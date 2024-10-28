@@ -80,12 +80,14 @@ const AuthForm: React.FC<AuthFormProps> = ({
                                 >
                                     이메일
                                 </label>
-                                <button
-                                    type="button"
-                                    className="text-sm bg-blue-500 text-white p-1 hover:bg-blue-400 rounded-md"
-                                >
-                                    중복확인
-                                </button>
+                                {isSignUp && (
+                                    <button
+                                        type="button"
+                                        className="text-sm bg-blue-500 text-white p-1 hover:bg-blue-400 rounded-md"
+                                    >
+                                        중복확인
+                                    </button>
+                                )}
                             </div>
 
                             <div className="mt-1">
@@ -221,12 +223,14 @@ const AuthForm: React.FC<AuthFormProps> = ({
                                         >
                                             닉네임
                                         </label>
-                                        <button
-                                            type="button"
-                                            className="text-sm bg-blue-500 text-white p-1 hover:bg-blue-400 rounded-md"
-                                        >
-                                            중복확인
-                                        </button>
+                                        {isSignUp && (
+                                            <button
+                                                type="button"
+                                                className="text-sm bg-blue-500 text-white p-1 hover:bg-blue-400 rounded-md"
+                                            >
+                                                중복확인
+                                            </button>
+                                        )}
                                     </div>
 
                                     <div className="mt-1">
